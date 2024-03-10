@@ -1,0 +1,118 @@
+@import '../../css/bootstrap.min.css';
+@import '../app.component.css';
+@import '../../css/colors1.css';
+
+/* Banner */ 
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+.inner_banner_section {
+    background: url('../../assets/banner/inner_page_banner.jpg');
+    min-height: 245px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    width: 1200px;
+    max-width: 1200px;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.title-holder {
+    margin: 85px 0 0;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.breadcrumb li {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.breadcrumb li a {
+    position: relative;
+    top: 1px;
+    left: 0;
+}
+
+.breadcrumb>li+li::before {
+    position: relative;
+    content: '\203A';
+    margin: 0 10px;
+    font-size: 18px;
+    color: inherit;
+    opacity: .7;
+    display: inline-block;
+}
+
+
+/* Section */ 
+
+.padding_layout_1 {
+    padding-top: 120px;
+    padding-bottom: 115px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.margin_bottom_30_all {
+    margin-bottom: 30px;
+}
+
+.margin_bottom_30_all {
+    margin-bottom: 30px;
+}
+
+.text_align_center {
+    text-align: center;
+}
+
+a, .btn {
+    text-decoration: none !important;
+    outline: none !important;
+    transition: all .3s ease-in-out;
+}
+
+a.btn, button.btn {
+    min-width: 170px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    line-height: 52px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
