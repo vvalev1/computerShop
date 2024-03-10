@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { ErrorModule } from './error/error.module';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -12,6 +13,7 @@ import { ErrorModule } from './error/error.module';
 @NgModule({
   declarations: [
     AppComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

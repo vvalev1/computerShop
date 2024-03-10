@@ -145,6 +145,11 @@ option {
 	font-family: 'Poppins', sans-serif;
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #212121;
+    text-decoration: none !important;
+    opacity: 1;
+}
 
 
 
