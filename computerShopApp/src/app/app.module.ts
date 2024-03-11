@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { ErrorModule } from './error/error.module';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LoginComponent } from './user/login/login.component';
 
 
 
@@ -16,6 +17,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppComponent,
     ProductsComponent,
     ProductDetailsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
