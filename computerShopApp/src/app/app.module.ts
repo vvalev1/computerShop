@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
+import { CreateProductComponent } from './products/create-product/create-product.component';
 
 
 
@@ -20,6 +21,7 @@ import { RegisterComponent } from './user/register/register.component';
     ProductDetailsComponent,
     LoginComponent,
     RegisterComponent,
+    CreateProductComponent,
   ],
   imports: [
     BrowserModule,
