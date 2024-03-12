@@ -8,6 +8,7 @@ import { ErrorModule } from './error/error.module';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
 
 
 
@@ -18,6 +19,7 @@ import { LoginComponent } from './user/login/login.component';
     ProductsComponent,
     ProductDetailsComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
