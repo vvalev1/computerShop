@@ -1,0 +1,147 @@
+@import '../../app.component.css';
+@import '../../../css/bootstrap.min.css';
+@import '../../../css/colors1.css';
+@import '../../../css/font-awesome.min.css';
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+/*=== Start of Banner style ===*/
+
+.inner_banner_section {
+    background: url("../../../assets/banner/inner_page_banner.jpg");
+    min-height: 245px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.title-holder {
+    margin: 85px 0 0;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.breadcrumb li {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.breadcrumb li a {
+    position: relative;
+    top: 1px;
+    left: 0;
+}
+
+.breadcrumb>li+li::before {
+    position: relative;
+    content: '\203A';
+    margin: 0 10px;
+    font-size: 18px;
+    color: inherit;
+    opacity: .7;
+    display: inline-block;
+}
+
+/*=== End of Banner style ===*/
+
+/*=== Start of Edit Product form style ===*/
+
+.padding_layout_1 {
+    padding-top: 120px;
+    padding-bottom: 115px;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form-checkout, .coupen-form {
+    border: solid #ddd 1px;
+    padding: 25px 20px;
+    margin-bottom: 10px;
+}
+
+.login-form-checkout label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+
+.login-form-checkout input.input-text, .coupen-form input.input-text {
+    border: solid #ccc 1px;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.bt_main {
+    color: #fff;
+    font-size: 14px;
+    min-width: 148px;
+    text-align: center;
+    height: 48px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-weight: 500;
+    border: none;
+    padding: 0 35px;
+    cursor: pointer;
+    background: #039ee3;
+}
+
+.btn-login .bt_main {
+    height: 42px;
+    line-height: 42px;
+    min-width: auto;
+    margin-left: -15px;
+}
+
+.btn-login .remeber {
+    font-size: 13px;
+    margin: 11px 0 0;
+    float: left;
+}
+
+.btn-login .remeber input {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+}
+
+.form-check {
+    display: flex;
+    gap: 1em;
+}
+
+/*=== End of Edit Product form style ===*/
