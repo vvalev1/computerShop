@@ -13,6 +13,7 @@ import { CreateProductComponent } from './products/create-product/create-product
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 
 
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     CreateProductComponent,
     EditProductComponent,
     CartComponent,
-    HomeComponent
+    HomeComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
