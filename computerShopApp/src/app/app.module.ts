@@ -12,6 +12,7 @@ import { RegisterComponent } from './user/register/register.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -25,7 +26,8 @@ import { CartComponent } from './cart/cart.component';
     RegisterComponent,
     CreateProductComponent,
     EditProductComponent,
-    CartComponent
+    CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
