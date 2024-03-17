@@ -14,6 +14,7 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
 import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './home/home.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { SearchComponent } from './shared/search/search.component';
 
 
 
@@ -29,7 +30,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     EditProductComponent,
     CartComponent,
     HomeComponent,
-    LoaderComponent
+    LoaderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

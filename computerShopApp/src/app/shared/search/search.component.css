@@ -1,0 +1,117 @@
+@import "../../app.component.css";
+@import "../../../css/bootstrap.min.css";
+@import "../../../css/font-awesome.min.css";
+@import "../../../css/colors1.css";
+
+
+#search_bar {
+    padding: 0 !important;
+    display: block;
+    padding-right: 17px;
+}
+
+#search_bar .modal-dialog {
+    width: 100%;
+    padding: 0;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    transform: translate(0, 0%);
+    max-width: 100%;
+    margin: 0;
+}
+
+#search_bar .modal-content {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#search_bar .modal-header {
+    padding: 0;
+    border-bottom: none;
+}
+
+#search_bar button.close {
+    float: right;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+    text-shadow: none;
+    opacity: 1;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    background: #fff;
+    margin: 0;
+    position: fixed;
+    right: 0;
+}
+
+#search_bar button.close {
+    color: #000;
+    text-shadow: none;
+}
+
+#search_bar .modal-body {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#search_bar .navbar-search {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#search_bar .search-global {
+    position: absolute;
+    top: 50vh;
+    margin-top: -122px;
+    width: 90%;
+}
+
+#search_bar .search-global__input {
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff !important;
+    background-color: transparent;
+    opacity: 1;
+    height: auto !important;
+    padding: 0 70px 23px 0 !important;
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 75px;
+    letter-spacing: -3px;
+}
+
+#search_bar .search-global__btn {
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    font-size: 42px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+#search_bar .search-global__note {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.fade {
+    opacity: 0.95;
+    background: #039ee3;;
+}
+
+input::placeholder{
+    color: #fff;
+  }

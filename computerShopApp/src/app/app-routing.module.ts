@@ -6,12 +6,14 @@ import { ErrorComponent } from './error/error.component';
 import { ProductsComponent } from './products/products.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { RegisterComponent } from './user/register/register.component';
+import { SearchComponent } from './shared/search/search.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent},
   { path: 'products', component: ProductsComponent},
   { path: 'create-product', component: CreateProductComponent},
+  { path: 'search', component: SearchComponent},
 
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
