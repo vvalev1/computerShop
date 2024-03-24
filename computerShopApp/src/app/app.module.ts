@@ -17,6 +17,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { SearchComponent } from './shared/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TokenProvider } from './app.interceptor';
 
 
 
@@ -43,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [TokenProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
