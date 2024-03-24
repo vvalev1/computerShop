@@ -41,7 +41,6 @@ export class UserService {
   }
 
   logout() {
-    localStorage.removeItem('token');
     return this.http.get(`${SERVER_BASE_URL}/users/logout`)
               .pipe(tap(() => {
                 this.user$$.next(undefined);

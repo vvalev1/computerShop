@@ -19,7 +19,6 @@ export class HeaderComponent {
     const username = this.userService.user?.username || '';
 
     if(username !== undefined) {
-      console.log(this.userService.user?.username)
       return username;
     }
     
@@ -28,9 +27,11 @@ export class HeaderComponent {
   logout() {
     this.userService.logout().subscribe({
       next: () => {
+        localStorage.removeItem('token');
         this.router.navigate(['/login']);
       },
       error: () => {
+        localStorage.removeItem('token');
         this.router.navigate(['/login']);
       }
     });
