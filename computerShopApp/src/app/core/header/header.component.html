@@ -63,10 +63,18 @@
                 </ul>
               </div>
               <div id="navbar_menu">
-                <ul class="first-ul">
+                <!-- If is User is LoggedIn -->
+                <ul class="first-ul" *ngIf="!isLoggedIn">
                   <li><a href="#" style="color: black;">|</a></li>
                   <li><a routerLink="/login">Login</a></li>
                   <li><a routerLink="/register">Register</a></li>
+                </ul>
+
+                <!-- If is User NOT LoggedIn -->
+                <ul class="first-ul" *ngIf="isLoggedIn">
+                  <li><a href="#" style="color: black;">|</a></li>
+                  <li><a routerLink="/">Welcome, {{username}}</a></li>
+                  <li (click)="logout()"><a href="">Logout</a></li>
                 </ul>
               </div>
             </div>
