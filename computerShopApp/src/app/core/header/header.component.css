@@ -306,3 +306,7 @@ footer ul.social_icons li a:focus, .breadcrumb li a {
 .search_icon ul li a {
     color: #000;
 }
+
+#logOut {
+    cursor: pointer;
+}
