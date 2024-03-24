@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products.component';
-import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
-import { RouterModule } from '@angular/router';
+import { ProductsRoutingModule } from './products-routing.module';
+
 
 
 
@@ -11,7 +12,7 @@ import { RouterModule } from '@angular/router';
   declarations: [ProductsComponent, ProductDetailsComponent, EditProductComponent],
   imports: [
     CommonModule,
-    RouterModule
+    ProductsRoutingModule
   ],
   exports: [ProductsComponent, ProductDetailsComponent]
 })
