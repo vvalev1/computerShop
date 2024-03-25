@@ -26,6 +26,19 @@ export class UserService implements OnDestroy {
     return !!this.user || !!localStorage.getItem('token');
   }
 
+  register(name: string, email: string, password: string) {
+    return this.http.post<UserForAuth>(`${SERVER_BASE_URL}/users/register`, {name, email, password})
+            .pipe(tap((user) => {
+              this.user$$.next(user);
+              this.token = user.accessToken;
+
+               // Save token in local Storage only if it NOT undefined 
+               if(this.token !== undefined) {
+                localStorage.setItem('token', this.token);
+              }
+            }));
+  }
+
   login(email: string, password: string) {
     return this.http.post<UserForAuth>(`${SERVER_BASE_URL}/users/login`, {email, password})
             .pipe(tap((user) => { 
