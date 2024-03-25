@@ -34,7 +34,7 @@ import { TokenProvider } from './app.interceptor';
     CartComponent,
     HomeComponent,
     LoaderComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

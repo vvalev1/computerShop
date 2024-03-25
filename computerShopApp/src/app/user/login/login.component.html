@@ -1,55 +1,100 @@
 <!-- inner page banner -->
 <div id="inner_banner" class="section inner_banner_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="full">
-            <div class="title-holder">
-              <div class="title-holder-cell text-left">
-                <h1 class="page-title">Login</h1>
-                <ol class="breadcrumb">
-                  <li><a routerLink = "/">Home</a></li>
-                  <li class="active">Login</li>
-                </ol>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="full">
+          <div class="title-holder">
+            <div class="title-holder-cell text-left">
+              <h1 class="page-title">Login</h1>
+              <ol class="breadcrumb">
+                <li><a routerLink="/">Home</a></li>
+                <li class="active">Login</li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- end inner page banner -->
-  <div class="section padding_layout_1 checkout_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="full">
-            <div id="login">
-              <div class="login-form-checkout">
-                <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-                    <div class="form-group">
-                      <label for="email">Email <span class="required">*</span></label>
-                      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" 
-                        ngModel
-                        #inputEmail="ngModel"
-                      >
+</div>
+<!-- end inner page banner -->
+<div class="section padding_layout_1 checkout_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="full">
+          <div id="login">
+            <div class="login-form-checkout">
+              <!-- Error - empty requset -->
+              <ng-container *ngIf="errorMsg">
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <div>
+                      {{errorMsg}}
                     </div>
-                    <div class="form-group">
-                      <label for="password">Password <span class="required">*</span></label>
-                      <input type="password" class="form-control" id="password" name="password" placeholder="Password"
-                        ngModel
-                        #inputPassword="ngModel"
-                      >
+                </div>
+              </ng-container>
+
+              <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <div class="form-group">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" 
+                  ngModel
+                  #inputEmail="ngModel"
+                  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" 
+                  required
+                  >
+                </div>
+
+                <!-- Email Error -->
+                <ng-container *ngIf="inputEmail.touched">
+                  <div class="alert alert-danger d-flex align-items-center" role="alert"
+                    *ngIf="inputEmail.errors?.['required']">
+                    <div>
+                      Email is required!
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12 btn-login">
-                        <button type="submit" class="bt_main">Login</button>
+                  </div>
+                  <div class="alert alert-danger d-flex align-items-center" role="alert"
+                    *ngIf="inputEmail.errors?.['pattern']">
+                    <div>
+                      Email is invalid!
                     </div>
-                  </form>
-              </div>
+                  </div>
+                                  
+                </ng-container>
+
+
+                <div class="form-group">
+                  <label for="password">Password <span class="required">*</span></label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                    ngModel #inputPassword="ngModel" required minlength="6">
+                </div>
+
+                <!-- Password Error -->
+                <ng-container *ngIf="inputPassword.touched">
+                  <div class="alert alert-danger d-flex align-items-center" role="alert"
+                    *ngIf="inputPassword.errors?.['required']">
+                    <div>
+                      Password is required!
+                    </div>
+                  </div>
+                  <div class="alert alert-danger d-flex align-items-center" role="alert"
+                    *ngIf="inputPassword.errors?.['minlength']">
+                    <div>
+                      Password must be at least 6 characters!
+                    </div>
+                  </div>
+                </ng-container>
+
+                <div class="col-md-12 col-sm-12 col-xs-12 btn-login">
+                  <button type="submit" class="bt_main">Login</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- section -->
+</div>
+<!-- section -->

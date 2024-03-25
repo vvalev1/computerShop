@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  public errorMsg: string = '';
+
   constructor(private userService: UserService, private router: Router) {
   }
     
@@ -18,14 +20,23 @@ export class LoginComponent {
 
     const { email, password } = loginForm.value;
 
-    this.userService.login(email, password).subscribe(() => {
-       this.router.navigate(['/products']);
+    if(email === '' || password === '') {
+        this.errorMsg = 'Email and/or password is empty!';
+        return;
+    } else {
+      this.errorMsg = '';
+    }
+
+    this.userService.login(email, password).subscribe({
+      next: () => {
+        this.router.navigate(['/products']);
+      },
+      error: (e) => {
+        this.errorMsg = e.error.message;
+      }
+       
     });
     
-    console.log(this.userService.isLoggedIn)
   }
-
-  
-
 
 }
