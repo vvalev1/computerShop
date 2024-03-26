@@ -1,7 +1,7 @@
 
 export interface UserForAuth {
     email: string,
-    username: string,
+    name: string,
     _id: string,
     accessToken: string
 }

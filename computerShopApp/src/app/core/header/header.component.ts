@@ -16,7 +16,7 @@ export class HeaderComponent {
     return this.userService.isLoggedIn;
   } 
   get username(): any {
-    const username = this.userService.user?.username || '';
+    const username = this.userService.user?.name || '';
 
     if(username !== undefined) {
       return username;
