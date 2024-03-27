@@ -6,5 +6,5 @@ export interface Product {
     quantity: number, 
     productType: string,
     description: string,
-    owner_id: string
+    _ownerid: string
 }
