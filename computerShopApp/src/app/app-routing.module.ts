@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
 import { RegisterComponent } from './user/register/register.component';
 import { SearchComponent } from './shared/search/search.component';
+import { ProductsRoutingModule } from './products/products-routing.module';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
@@ -22,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ProductsRoutingModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
