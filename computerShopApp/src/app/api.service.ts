@@ -15,4 +15,14 @@ export class ApiService {
     return this.http.post<Product>(`${baseUrl}/data/products`, {...productValues, owner_id});
   }
 
+  getAllProducts() {
+    const baseUrl = SERVER_BASE_URL;
+    return this.http.get<Product>(`${baseUrl}/data/products`);
+  }
+
+  getProduct(productId: string) {
+    const baseUrl = SERVER_BASE_URL;
+    return this.http.get<Product>(`${baseUrl}/products/${productId}`);
+  }
+
 }
