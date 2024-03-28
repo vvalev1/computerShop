@@ -25,158 +25,15 @@
       <div class="row">
         <div class="col-md-9">
           <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
+            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all" *ngFor="let product of products">
               <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/1.jpg" alt=""> </div>
+                <div class="product_img"> <img class="img-responsive" src="{{product.imageUrl}}" alt=""> </div>
                 <div class="product_detail_btm">
                   <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
+                    <h4><a [routerLink]="product._id">{{product.productName}}</a></h4>
                   </div>
                   <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/2.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Kaspersky Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/3.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Mcafee Livesafe Antivirus</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/4.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/5.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/6.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Kaspersky Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/7.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Mcafee Livesafe Antivirus</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/8.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/1.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/2.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Kaspersky Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/3.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Mcafee Livesafe Antivirus</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$24.99</span><span class="new_price"> $12.49</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_30_all">
-              <div class="product_list">
-                <div class="product_img"> <img class="img-responsive" src="../../assets/products-images/4.jpg" alt=""> </div>
-                <div class="product_detail_btm">
-                  <div class="center">
-                    <h4><a href="it_shop_detail.html">Norton Internet Security</a></h4>
-                  </div>
-                  <div class="product_price">
-                    <p><span class="old_price">$15.00</span> – <span class="new_price">$25.00</span></p>
+                    <p><span class="new_price">${{product.price}}</span></p>
                   </div>
                 </div>
               </div>
@@ -204,4 +61,6 @@
     </div>
   </div>
   <!-- end section -->
+
+  <router-outlet/>
 
