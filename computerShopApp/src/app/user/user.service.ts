@@ -11,7 +11,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 export class UserService implements OnDestroy {
   private user$$ = new BehaviorSubject<UserForAuth | undefined>(undefined);
   private user$ = this.user$$.asObservable();
-  private token: string | undefined;
+  private token: string | undefined = '';
 
   user: UserForAuth | undefined;
 
@@ -57,6 +57,7 @@ export class UserService implements OnDestroy {
     return this.http.get(`${SERVER_BASE_URL}/users/logout`)
               .pipe(tap(() => {
                 this.user$$.next(undefined);
+                localStorage.removeItem('token');
               }));
   }
 

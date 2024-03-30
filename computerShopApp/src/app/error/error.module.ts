@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   declarations: [ErrorComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [ErrorComponent]
 })

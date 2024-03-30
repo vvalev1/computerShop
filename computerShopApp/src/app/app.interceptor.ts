@@ -13,17 +13,17 @@ import { Observable } from 'rxjs';
 class TokenInterceptor implements HttpInterceptor {
   
   constructor() {
-
+    
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
     const token = localStorage.getItem('token');
     const reqClone = request.clone({
       headers: request.headers.append('X-Authorization', String(token)) 
     });
 
     if(token) {
+      
       return next.handle(reqClone);
     }
     return next.handle(request);
