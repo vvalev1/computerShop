@@ -30,4 +30,9 @@ export class ApiService {
     return this.http.put<Product>(`${baseUrl}/data/products/${productId}`, productValues);
   }
 
+  removeProduct(productId: string) {
+    const baseUrl = SERVER_BASE_URL;
+    return this.http.delete<Product>(`${baseUrl}/data/products/${productId}`);
+  }
+
 }
