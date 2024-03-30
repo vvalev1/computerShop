@@ -10,9 +10,10 @@ const routes: Routes = [
       children: [
         { path: "", pathMatch: "full", component: ProductsComponent},
         { path: ":productId", component: ProductDetailsComponent},
-        { path: "edit/:productId", component: EditProductComponent }
+        { path: ":productId/edit", component: EditProductComponent },
       ] 
     },
+    
     {path: "create-product", component: CreateProductComponent}
 ];
 

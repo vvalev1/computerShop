@@ -34,10 +34,10 @@ export class CreateProductComponent {
     this.errorMsgs = [];
     let isError: boolean = false;
 
-    const { name, price, imgUrl, quantity, productType, description } = createForm.value;
+    const { productName, price, imgUrl, quantity, productType, description } = createForm.value;
     
 
-    if(name === '' || price === '' || imgUrl === '' 
+    if(productName === '' || price === '' || imgUrl === '' 
       || quantity === '' || productType === '' || description === '') {
 
         this.errorMsgs.push('Please, fill in all the fields!');

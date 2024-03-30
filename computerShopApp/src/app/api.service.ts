@@ -25,4 +25,9 @@ export class ApiService {
     return this.http.get<Product>(`${baseUrl}/data/products/${productId}`);
   }
 
+  updateProduct(productValues: object, productId: string) {
+    const baseUrl = SERVER_BASE_URL;
+    return this.http.put<Product>(`${baseUrl}/data/products/${productId}`, productValues);
+  }
+
 }
