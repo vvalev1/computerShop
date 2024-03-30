@@ -20,15 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { TokenProvider } from './app.interceptor';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    ProductDetailsComponent,
     LoginComponent,
     RegisterComponent,
     CreateProductComponent,
+    ProductsComponent,
+    ProductDetailsComponent,
     EditProductComponent,
     CartComponent,
     HomeComponent,

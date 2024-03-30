@@ -22,7 +22,7 @@ export class ApiService {
 
   getProduct(productId: string) {
     const baseUrl = SERVER_BASE_URL;
-    return this.http.get<Product>(`${baseUrl}/products/${productId}`);
+    return this.http.get<Product>(`${baseUrl}/data/products/${productId}`);
   }
 
 }
