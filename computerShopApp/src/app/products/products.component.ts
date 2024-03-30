@@ -10,16 +10,22 @@ import { Observable } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
 
+  errorMsg = '';
+  
+
   products: Product[] | null = [];
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
     this.apiService.getAllProducts().subscribe({
-      next: (products: any) => {
+    next: (products: any) => {
       this.products = products;
     },
     error: (e) => {
+      if(e.error.code === 404) {
+        this.errorMsg = 'No items added yet!';
+      }
       return;
     }
   });

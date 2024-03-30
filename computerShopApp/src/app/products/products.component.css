@@ -190,4 +190,10 @@ ol, ul {
     transition: ease all 0.5s;
 }
 
+.errorMsg {
+    font-size: larger;
+    font-weight: bold;
+    color: #000;
+}
+
 
