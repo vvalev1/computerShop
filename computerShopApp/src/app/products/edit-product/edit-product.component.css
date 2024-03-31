@@ -1,4 +1,5 @@
-@import '../../app.component.css';
+/* @import '../../app.component.css'; */
+@import url('http://localhost:4200/styles.css');
 @import '../../../css/bootstrap.min.css';
 @import '../../../css/colors1.css';
 @import '../../../css/font-awesome.min.css';

@@ -5,17 +5,18 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CreateProductComponent } from './create-product/create-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { CartComponent } from '../cart/cart.component';
+import { AuthGuardActivate } from '../guard/auth.guard';
 
 const routes: Routes = [
-    { path: "products", 
-      children: [
-        { path: "", pathMatch: "full", component: ProductsComponent},
-        { path: ":productId", component: ProductDetailsComponent},
-        { path: ":productId/edit", component: EditProductComponent },
+    { path: "products",
+     children: [
+       { path: "", pathMatch: "full", component: ProductsComponent},
+        { path: ":productId", component: ProductDetailsComponent, canActivate:[AuthGuardActivate]},
+        { path: ":productId/edit", component: EditProductComponent, canActivate:[AuthGuardActivate] },
       ] 
     },
     
-    {path: "create-product", component: CreateProductComponent},
+    {path: "create-product", component: CreateProductComponent, canActivate:[AuthGuardActivate] },
     {path: "cart", component: CartComponent}
 ];
 
