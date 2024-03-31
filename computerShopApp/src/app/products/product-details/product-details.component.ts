@@ -41,7 +41,7 @@ export class ProductDetailsComponent implements OnInit {
     addToCart(cartForm: NgForm) {
       const { countProduct } = cartForm.value;
 
-      this.apiService.addToCart({...this.product, countProduct}, this.product._ownerid).subscribe({
+      this.apiService.addToCart({products: {...this.product}, countProduct}, this.product._ownerid).subscribe({
         next: () => {
           this.router.navigate(['/cart']);
 
