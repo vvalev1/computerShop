@@ -46,9 +46,9 @@ export class ApiService {
     return this.http.get<Cart>(`${baseUrl}/data/cart`);
   }
 
-  removeFromCart(productId: string) {
+  removeFromCart(cartId: string) {
     const baseUrl = SERVER_BASE_URL;
-    return this.http.delete<Cart>(`${baseUrl}/data/cart/${productId}`);
+    return this.http.delete<Cart>(`${baseUrl}/data/cart/${cartId}`);
   }
 
 }
