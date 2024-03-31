@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Product } from 'src/app/types/product';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-product-details',
@@ -12,8 +13,12 @@ import { Product } from 'src/app/types/product';
 export class ProductDetailsComponent implements OnInit {
     product = {} as Product;
     defaultCountProduct: number = 1;
-    constructor(private apiService: ApiService, private activeRoute: ActivatedRoute, private router: Router) {}
-    
+    constructor(private apiService: ApiService, private activeRoute: ActivatedRoute, private router: Router, private userService: UserService) {}
+
+    get isOwner() {
+      return this.userService.user?._id === this.product._ownerId;
+    } 
+
     ngOnInit(): void {
       this.activeRoute.params.subscribe((data) => {
         const id = data['productId'];
@@ -41,7 +46,7 @@ export class ProductDetailsComponent implements OnInit {
     addToCart(cartForm: NgForm) {
       const { countProduct } = cartForm.value;
 
-      this.apiService.addToCart({products: {...this.product}, countProduct}, this.product._ownerid).subscribe({
+      this.apiService.addToCart({products: {...this.product}, countProduct}, this.product._ownerId).subscribe({
         next: () => {
           this.router.navigate(['/cart']);
 
