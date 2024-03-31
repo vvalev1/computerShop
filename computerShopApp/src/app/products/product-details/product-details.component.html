@@ -40,9 +40,10 @@
                 <!-- <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. 
                   Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.<br>
                   <span class="stock">2 in stock</span> </p> -->
-                <form class="cart" method="post" action="it_cart.html">
+                <form class="cart" #cartForm="ngForm" (ngSubmit)="addToCart(cartForm)">
                   <div class="quantity">
-                    <input step="1" min="1" max="5" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" type="number">
+                    <input step="1" min="1" max="10" name="countProduct"  title="Qty" class="input-text qty text" size="4" type="number"
+                    [(ngModel)]="defaultCountProduct">
                   </div>
                   <button type="submit" class="btn sqaure_bt">Add to cart</button>
                 </form>
