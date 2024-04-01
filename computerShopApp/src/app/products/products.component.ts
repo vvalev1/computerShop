@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Product } from '../types/product';
 import { ApiService } from '../api.service';
 
@@ -10,27 +10,31 @@ import { ApiService } from '../api.service';
 })
 export class ProductsComponent implements OnInit {
 
-  errorMsg = '';
-  
+  @Input() products: Product[] | null
+  @Input() isExternalRendered: boolean = false;
 
-  products: Product[] | null = [];
+  errorMsg = '';
+
+  // products: Product[] | null = [];
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.apiService.getAllProducts().subscribe({
-    next: (products: any) => {
-      this.products = products;
-    },
-    error: (e) => {
-      if(e.error.code === 404) {
-        this.errorMsg = 'No items added yet!';
-      }
-      return;
+    if(!this.isExternalRendered) {
+      this.apiService.getAllProducts().subscribe({
+        next: (products: any) => {
+          this.products = products;
+        },
+        error: (e) => {
+          if(e.error.code === 404) {
+            this.errorMsg = 'No items added yet!';
+          }
+          return;
+        }
+      });
     }
-  });
+    
   }
-
 
 
 }

@@ -51,4 +51,13 @@ export class ApiService {
     return this.http.delete<Cart>(`${baseUrl}/data/cart/${cartId}`);
   }
 
+  getProductByName(productName: string) {
+    const baseUrl = SERVER_BASE_URL;
+    const where = `?where=productName LIKE "${productName}"`;
+    const searchUrl = `${baseUrl}/data/products/${where}`
+    const encodedUrl = encodeURI(searchUrl);
+    
+    return this.http.get<Product>(`${encodedUrl}`);
+  }
+
 }

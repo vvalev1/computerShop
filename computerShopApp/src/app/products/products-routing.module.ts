@@ -11,7 +11,7 @@ const routes: Routes = [
     { path: "products",
      children: [
        { path: "", pathMatch: "full", component: ProductsComponent},
-        { path: ":productId", component: ProductDetailsComponent, canActivate:[AuthGuardActivate]},
+        { path: ":productId", component: ProductDetailsComponent },
         { path: ":productId/edit", component: EditProductComponent, canActivate:[AuthGuardActivate] },
       ] 
     },
