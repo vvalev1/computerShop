@@ -1339,6 +1339,92 @@
     	}
     };
     var seedData = {
+        products: {
+    		"d298df2a-2888-480f-8de8-29e2bb8334a2": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                productName: "Logitech M650 mouse",
+                price: 34,
+    			imageUrl: "data:image/jpeg;base64,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",
+                quantity: 65,
+                productType: "Components and peripherals",
+                description: "Upgrade to smarter scrolling, better comfort, and more productivity. The Signature M650 features SmartWheel scrolling that delivers precision or speed the moment you need it.",
+                owner_id: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1712086163925,
+                _id: "d298df2a-2888-480f-8de8-29e2bb8334a2"
+    		},
+    		"c0254e30-9100-4121-8873-b8def2dfd5ea": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                productName: "Keyboard Dell KB900",
+                price: 90,
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDXurz8vNnWT3aacVSKjgM9LJwlUdcNHEjeg&s",
+                quantity: 84,
+                productType: "Components and peripherals",
+                description: "This is the World's first Zoom-certified* rechargeable keyboard, built to transform collaboration, enhance productivity and provide all-day comfort.",
+                owner_id: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1712086634309,
+                _id: "c0254e30-9100-4121-8873-b8def2dfd5ea"
+    		},
+    		"aa0511e1-7630-463d-a870-6a3d975e0280": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                productName: "Dell 32 Curved 4K UHD Monitor",
+                price: 359.99,
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdhCTROE2YXZm6cCwQMflvcYniNjN97--VA&s",
+                quantity: 66,
+                productType: "Monitors",
+                description: "32\"\n4K 3840 x 2160 at 60 Hz\n2 x HDMI (HDCP 2.2)\nDisplayPort 1.2\nAudio line-out\nUSB 3.0 upstream\nUSB 3.0 downstream\nUSB 3.0 downstream with Battery Charging 1.2\n1 x HDMI cable\n1 x USB 3.0 upstream cable\nSpeakers - stereo",
+                owner_id: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1712086962627,
+                _id: "aa0511e1-7630-463d-a870-6a3d975e0280"
+    		},
+            "40405b5d-67a1-4399-8729-1ffa8de60a74": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                productName: "Laptop ASUS X515JA-BQ301T Windows 10 Home",
+                price: 700,
+                imageUrl: "https://cdn.techmart.bg/assets/techmart/img/products/26935/image/asus-x515-297058ph2_stuff_52080__pic2_1394047099.jpg",
+                quantity: 56,
+                productType: "Laptops and Computers",
+                description: "Inch: 15.6\nDisplay size: 1920x1080, LED\nProccessor: Intel Core i3, Intel Core i3-1005G1, 1.20 GHz\nRAM: 4 GB\nSSD: 256 GB M.2 PCle NVMe",
+                owner_id: "35c62d76-8152-4626-8712-eeb96381bea8",
+                _createdOn: 1712087250247,
+                _id: "40405b5d-67a1-4399-8729-1ffa8de60a74"
+            },
+            "67120b53-d4dc-47dc-8b9b-4c0c40943d08": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                productName: "HP LaserJet Pro MFP 3102fdn Printer (3G629F)",
+                price: 555.89,
+                imageUrl: "data:image/jpeg;base64,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",
+                quantity: 45,
+                productType: "Printers",
+                description: " Print, copy, scan, fax\nBlack (normal, A4): Up to 33 ppm; Black (Duplex, A4): Up to 20 ipm 1\nUp to 1200 x 1200 dpi\nStandard, 50 sheets",
+                owner_id: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1712087477457,
+                _id: "67120b53-d4dc-47dc-8b9b-4c0c40943d08"
+            },
+            "b559627d-62ff-4765-ae2e-865fc8a8272d": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                productName: "PowerEdge R860 Rack Server",
+                price: 37898,
+                imageUrl: "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-enterprise-products/enterprise-systems/poweredge/r860/media-gallery/server-poweredge-r860-black-gallery-2.psd?qlt=90,0&op_usm=1.75,0.3,2,0&resMode=sharp&pscan=auto&fmt=png-alpha&hei=500",
+                quantity: 40,
+                productType: "Servers and storages",
+                description: "The Dell PowerEdge R860 is an extremely powerful air-cooled server engineered for business-critical applications.",
+                owner_id: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1712087823368,
+                _id: "b559627d-62ff-4765-ae2e-865fc8a8272d"
+            },
+            "5a6eaf3c-f992-4794-b646-2f8776ba19c3": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                productName: "ASUS - AX3000 Dual-Band WiFi 6 Wireless Router with Life time internet Security - Black",
+                price: 140,
+                imageUrl: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6377/6377908_sd.jpg;maxHeight=200;maxWidth=300",
+                quantity: 51,
+                productType: "Routers",
+                description: "Wi-Fi 6 Supports faster speeds with compatible devices\nSupports more devices on your network than previous generations of Wi-Fi while maintaining speeds\nWorks with previous versions Wi-Fi 4 and Wi-Fi 5\n> 2500 sq. ft.\nIdeal for larger homes (or smaller homes with more interference)",
+                owner_id: "847ec027-f659-4086-8032-5173e2f9c93a",
+                _createdOn: 1712088211840,
+                _id: "5a6eaf3c-f992-4794-b646-2f8776ba19c3"
+            }
+    	},
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
