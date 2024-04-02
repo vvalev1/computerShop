@@ -178,6 +178,7 @@ ol, ul {
 .categary li:hover, .categary li:focus {
     padding-left: 30px;
     background: #039ee3;
+    cursor: pointer;
 }
 
 .categary li:hover a, .categary li:focus a {
@@ -196,4 +197,13 @@ ol, ul {
     color: #000;
 }
 
+.activeFilterLi {
+    padding-left: 30px;
+    background: #039ee3;
+    cursor: pointer;
+}
+
+.activeFilterAnchor {
+    color: #fff;
+}
 

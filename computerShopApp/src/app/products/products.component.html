@@ -49,12 +49,13 @@
               <h4>TYPE OF PRODUCTS</h4>
               <div class="categary">
                 <ul>
-                  <li><a href="it_data_recovery.html"><i class="fa fa-angle-right"></i> Laptops and Computers</a></li>
-                  <li><a href="it_computer_repair.html"><i class="fa fa-angle-right"></i> Components and peripherals</a></li>
-                  <li><a href="it_mobile_service.html"><i class="fa fa-angle-right"></i> Monitors</a></li>
-                  <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Servers and storages</a></li>
-                  <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Printers</a></li>
-                  <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Routers</a></li>
+                  <li (click)="loadAllProducts()" [ngClass]="isActive ? 'activeFilterLi' : ''"><a [ngClass]="isActive ? 'activeFilterAnchor' : ''"><i class="fa fa-angle-right"></i> All products</a></li>
+                  <li (click)="loadLaptopsAndComputers()" [class.activeFilterLi]="isActive"><a [class.activeFilterAnchor]="isActive"><i class="fa fa-angle-right"></i> Laptops and Computers</a></li>
+                  <li (click)="loadComponentsAndPeripherals()"><a><i class="fa fa-angle-right"></i> Components and peripherals</a></li>
+                  <li (click)="loadMonitors()"><a><i class="fa fa-angle-right"></i> Monitors</a></li>
+                  <li (click)="loadServersAndStorages()"><a><i class="fa fa-angle-right"></i> Servers and storages</a></li>
+                  <li (click)="loadPrinters()"><a><i class="fa fa-angle-right"></i> Printers</a></li>
+                  <li (click)="loadRouters()"><a><i class="fa fa-angle-right"></i> Routers</a></li>
                 </ul>
               </div>
             </div>
