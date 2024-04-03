@@ -48,14 +48,14 @@
             <div class="side_bar_blog">
               <h4>TYPE OF PRODUCTS</h4>
               <div class="categary">
-                <ul>
-                  <li (click)="loadAllProducts()" [ngClass]="isActive ? 'activeFilterLi' : ''"><a [ngClass]="isActive ? 'activeFilterAnchor' : ''"><i class="fa fa-angle-right"></i> All products</a></li>
-                  <li (click)="loadLaptopsAndComputers()" [class.activeFilterLi]="isActive"><a [class.activeFilterAnchor]="isActive"><i class="fa fa-angle-right"></i> Laptops and Computers</a></li>
-                  <li (click)="loadComponentsAndPeripherals()"><a><i class="fa fa-angle-right"></i> Components and peripherals</a></li>
-                  <li (click)="loadMonitors()"><a><i class="fa fa-angle-right"></i> Monitors</a></li>
-                  <li (click)="loadServersAndStorages()"><a><i class="fa fa-angle-right"></i> Servers and storages</a></li>
-                  <li (click)="loadPrinters()"><a><i class="fa fa-angle-right"></i> Printers</a></li>
-                  <li (click)="loadRouters()"><a><i class="fa fa-angle-right"></i> Routers</a></li>
+                <ul (click)="toggleSelection($event)">
+                  <li  id="allProducts" ><i class="fa fa-angle-right"></i> All products</li>
+                  <li  id="computers" ><i class="fa fa-angle-right"></i> Laptops and Computers</li>
+                  <li  id="peripherals"><i class="fa fa-angle-right"></i> Components and peripherals</li>
+                  <li  id="monitors" ><i class="fa fa-angle-right"></i> Monitors</li>
+                  <li  id="servers"><i class="fa fa-angle-right"></i> Servers and storages</li>
+                  <li  id="printers"><i class="fa fa-angle-right"></i> Printers</li>
+                  <li  id="routers"><i class="fa fa-angle-right"></i> Routers</li>                
                 </ul>
               </div>
             </div>

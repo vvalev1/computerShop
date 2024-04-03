@@ -18,6 +18,7 @@ import { SearchComponent } from './shared/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TokenProvider } from './app.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { TokenProvider } from './app.interceptor';
     ErrorModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [TokenProvider],
   bootstrap: [AppComponent]

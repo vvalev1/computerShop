@@ -164,14 +164,11 @@ ol, ul {
     padding: 15px 20px;
     font-weight: 600;
     font-size: 14px;
-}
-
-.categary a {
     color: #000;
     transition: ease all 0.5s;
 }
 
-.categary a i {
+.categary li i {
     margin-right: 2px;
 }
 
@@ -181,7 +178,7 @@ ol, ul {
     cursor: pointer;
 }
 
-.categary li:hover a, .categary li:focus a {
+.categary li:hover, .categary li:focus {
     color: #fff;
 }
 
@@ -198,12 +195,8 @@ ol, ul {
 }
 
 .activeFilterLi {
-    padding-left: 30px;
-    background: #039ee3;
-    cursor: pointer;
-}
-
-.activeFilterAnchor {
-    color: #fff;
+    padding-left: 30px !important;
+    background: #039ee3 !important; 
+    color: #fff !important;
 }
 
