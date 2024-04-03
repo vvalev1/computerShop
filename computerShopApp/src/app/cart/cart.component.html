@@ -48,15 +48,14 @@
                         <!-- <span>Status: </span><span class="text-success">In Stock</span> -->
                       </div>
                     </div></td>
-                  <td class="col-sm-1 col-md-1" style="text-align: center"><form #countProductForm="ngForm" action=""><input class="form-control top-margin"
-                     ngModel 
-                     [value]="product.countProduct" 
+                  <td class="col-sm-1 col-md-1" style="text-align: center"><form #countProductForm="ngForm" ><input class="form-control top-margin" style="text-align: center"
+                    [value]="product.countProduct"
                      name="productCount"  
-                     #inputProductCount="ngModel" 
                      type="number"
                      min="0"
                      disabled
                      ></form>
+
                   </td>
                   <td class="col-sm-1 col-md-1 text-center"><p class="price_table">${{product.products.price}}</p></td>
                   <td class="col-sm-1 col-md-1 text-center"><p class="price_table">${{product.total}}</p></td>

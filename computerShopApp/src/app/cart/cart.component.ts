@@ -11,7 +11,7 @@ import { NgForm, NgModel } from '@angular/forms';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements AfterViewInit {
+export class CartComponent implements OnInit {
 
   private cart$$ = new BehaviorSubject<Cart[] | null>(null);
   private cart$ = this.cart$$.asObservable();
@@ -26,7 +26,7 @@ export class CartComponent implements AfterViewInit {
 
   cartSubscription: Subscription;
 
-  productCountForm: NgForm;
+  countProductForm: NgForm;
 
   cart: Cart[] | null = [];
 
@@ -62,31 +62,16 @@ export class CartComponent implements AfterViewInit {
         this.cart$$.next(newArrCart);
       },
       error: (e) => {
-        console.log(e.error.message);
+        this.isHideCheckOut = true;
+        this.estimatedShipping = 0;
+        // console.log(e.error.message);
         return;
       }
     })
-  }
-
-  ngAfterViewInit(): void {
-
-    // console.log(this.cart$)
-    console.log(this.cart$.subscribe((cart) =>
-      this.cart = cart))
-    this.cart?.forEach(
-      (product: any) => {
-        const count = product.countProduct;
-        console.log(count)
-      }
-    ) //.forEach((product) => {
-    //       const count = product.countProduct;
-    //       console.log(count)
-    //       this.productCountForm.setValue({
-    //         productCount: count
-    //       })
 
   }
 
+ 
 
   removeProductFromCart(cartId: string) {
     this.subtotal = 0;
@@ -117,14 +102,14 @@ export class CartComponent implements AfterViewInit {
             this.cart$$.next(newArrCart);
           },
           error: (e) => {
-            console.log(e.error.message);
+            // console.log(e.error.message);
             return;
           }
         });
         this.router.navigate(['/cart']);
       },
       error: (e) => {
-        console.log(e.error.message);
+        // console.log(e.error.message);
       }
     })
   }
