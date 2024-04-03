@@ -44,10 +44,10 @@
             <div class="menu_side">
               <div id="navbar_menu">
                 <ul class="first-ul">
-                  <li> <a routerLink="/">Home</a></li>
-                  <li><a routerLink="/products">Products</a></li>
-                  <li *ngIf="isLoggedIn"> <a routerLink="/create-product">Add Product</a></li>
-                  <li> <a href="/cart">Cart</a></li>
+                  <li> <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+                  <li><a routerLink="/products" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Products</a></li>
+                  <li *ngIf="isLoggedIn"> <a routerLink="/create-product" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Add Product</a></li>
+                  <li> <a routerLink="/cart" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Cart</a></li>
                 </ul>
               </div>
               <div class="search_icon">
@@ -58,9 +58,9 @@
               <div id="navbar_menu">
                 <!-- If is User is LoggedIn -->
                 <ul class="first-ul" *ngIf="!isLoggedIn">
-                  <li><a href="#" style="color: black;">|</a></li>
-                  <li><a routerLink="/login">Login</a></li>
-                  <li><a routerLink="/register">Register</a></li>
+                  <li><a style="color: black;">|</a></li>
+                  <li><a routerLink="/login" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Login</a></li>
+                  <li><a routerLink="/register" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Register</a></li>
                 </ul>
 
                 <!-- If is User NOT LoggedIn -->

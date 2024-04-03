@@ -310,3 +310,7 @@ footer ul.social_icons li a:focus, .breadcrumb li a {
 #logOut {
     cursor: pointer;
 }
+
+.active-link {
+    color: #039ee3 !important;
+}
