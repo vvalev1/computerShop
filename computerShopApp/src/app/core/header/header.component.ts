@@ -1,27 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user/user.service';
 import { Router } from '@angular/router';
+import { UserForAuth } from 'src/app/types/user';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../../app.component.css','./header.component.css']
+  styleUrls: ['../../app.component.css','./header.component.css'],
+  providers:[UserService]
 })
 export class HeaderComponent {
+  
   constructor(private userService: UserService, private router: Router) {
   }
 
-  
+    
   get isLoggedIn(): boolean {
     return this.userService.isLoggedIn;
   } 
   get username(): any {
     const username = this.userService.user?.name;
-
-    if(username !== undefined) {
-      return username;
-    }
-    
+    return username;
   }
 
   logout() {

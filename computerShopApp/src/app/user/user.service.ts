@@ -3,7 +3,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 
 import { SERVER_BASE_URL } from '../constants';
 import { UserForAuth } from '../types/user';
-import { BehaviorSubject, Subscription, tap } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subscription, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,7 @@ export class UserService implements OnDestroy {
   get isLoggedIn(): boolean {
     return !!this.user || !!localStorage.getItem('token');
   }
+
 
   register(name: string, email: string, password: string) {
     return this.http.post<UserForAuth>(`${SERVER_BASE_URL}/users/register`, {name, email, password})
