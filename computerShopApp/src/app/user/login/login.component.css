@@ -93,8 +93,9 @@
 .login-form-checkout label {
     width: 100%;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 0 0 5px 0;
+    color: black;
 }
 
 .login-form-checkout input.input-text, .coupen-form input.input-text {
@@ -113,11 +114,12 @@
     height: 48px;
     border-radius: 5px;
     line-height: 50px;
-    font-weight: 500;
+    font-weight: 800;
     border: none;
     padding: 0 35px;
     cursor: pointer;
     background: #039ee3;
+    text-transform: uppercase;
 }
 
 .btn-login .bt_main {
@@ -144,6 +146,27 @@
     gap: 1em;
 }
 
+.btn:hover {
+      background-color: #1a5cd8;
+}
 
+.login-form-checkout {
+     background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+}
+
+.form-group {
+      margin-bottom: 1.2rem;
+}
+
+#login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
 /*=== End of Login form style ===*/
